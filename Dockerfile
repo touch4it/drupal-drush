@@ -1,6 +1,7 @@
 FROM composer/composer:alpine
 
 RUN apk --update add \
+    bash \
     build-base \
     libpq \
     mysql-client \
@@ -21,6 +22,6 @@ ENV DRUSH_VERSION 7.3.0
 
 RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
-ENTRYPOINT [""]
+ENTRYPOINT []
 
 CMD ["tail", "-f", "/dev/null"]

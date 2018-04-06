@@ -32,7 +32,7 @@ services:
 
 ```bash
 docker-compose up -d
-docker exec -it drupal-drush_console_1 drush
-docker exec -it drupal-drush_console_1 drush cache-clear all
+docker exec -it drupal-drush_console_1
+docker exec -it drupal-drush_console_1 cache-clear all
 docker-compose down
 ```

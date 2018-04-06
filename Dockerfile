@@ -17,8 +17,10 @@ RUN git clone --branch="master" https://github.com/phpredis/phpredis.git /usr/sr
   docker-php-ext-install redis && \
   php -m && php -r "new Redis();"
 
-ENV DRUSH_VERSION 9.2.1
+ENV DRUSH_VERSION 7.3.0
 
 RUN composer global require drush/drush:"$DRUSH_VERSION" --prefer-dist
 
-ENTRYPOINT ["drush"]
+ENTRYPOINT [""]
+
+CMD ["tail", "-f", "/dev/null"]

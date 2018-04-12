@@ -6,7 +6,7 @@ docker-compose.yml
 version: '2'
 services:
   apache:
-    image: drupal:7
+    image: drupal:8
     volumes:
       - .:/var/www/html
     expose:
@@ -16,7 +16,7 @@ services:
     depends_on:
       - mariadb
   console:
-    image: touch4it/drupal-drush
+    image: touch4it/drupal-drush:8
     volumes:
       - .:/app
     links:
